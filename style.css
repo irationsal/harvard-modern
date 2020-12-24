@@ -1,0 +1,16 @@
+#pager {
+    display:flex;
+    justify-content: space-evenly;
+}
+#results {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    height: 30%;
+    width: 30%;
+}
+.selected {
+    background-color: yellow;
+    color: red
+}
