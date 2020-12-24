@@ -37,7 +37,7 @@
         const page = window.location.hash.slice(1) || 1
         console.log(page)
 
-        const response = await fetch(BASE_URL+"&page=" + page)
+        const response = await fetch(BASE_URL + "&page=" + page)
         const data = await response.json()
         console.log(data)
 
