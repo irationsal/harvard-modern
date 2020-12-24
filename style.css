@@ -10,6 +10,11 @@ h1 {
     display:flex;
     justify-content: space-evenly;
 }
+#pager > a {
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
 #results {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,7 +34,8 @@ img {
 }
 .selected {
     background-color: yellow;
-    color: red
+    color: red;
+    border-color: yellow;
 }
 .container {
     display: flex;
