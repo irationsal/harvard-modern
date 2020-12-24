@@ -16,15 +16,24 @@
         const div = $("<div>").html(`
             <h3>${title}</h3>
             ${description ? `<p>${description}</p>` : "" }
-            ${primaryimageurl ? `<img src="${primaryimageurl}" /> `: "" }
-            <hr />
             `)
-        return div
+        if(primaryimageurl)
+            return div
+        else
+            return ""
+    }
+
+    function rendorImage({primaryimageurl}) {
+        const img = $(`${primaryimageurl ? `<img src="${primaryimageurl}" /> `: "" }`)
+        return img
     }
 
     function renderToResults({records}) {
         const resultsDiv = $('#results')
-        records.forEach(record => resultsDiv.append(rendorRecord(record)))
+        records.forEach((record) => {
+            resultsDiv.append(rendorRecord(record))
+            resultsDiv.append(rendorImage(record))
+        })
     }
 
     function emptyPageAndResults() {
